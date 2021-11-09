@@ -69,15 +69,15 @@ import inspect
 
 ###CONFIG#########################################################
 
-ds = lytro()#hci()
+ds = hci()
 
 crop_size = (ds.im_size[0]+22,ds.im_size[1]+22) #None#None #(int(ds.ir_max//3.7),int(ds.ic_max//3.7))#(1024,1024)
-crop_or_resize = "pad"#None # "resize"
+crop_or_resize = None # "resize"
 sample_names = ds.samples #list(set(ds.samples)-set(ds.corner_train_samples['train']))# ['greek'] #["img1","img2","img3"]
 
 path_weight = '/media/emre/Data/from_epinet/epinet_checkpoints/pretrained_9x9.hdf5'
-#run_dir = '/media/emre/Data/epinet_runs/09-05-13-05_greek/'
-#epoch = ''
+
+
 
 
 os.environ["CUDA_VISIBLE_DEVICES"]="0"
